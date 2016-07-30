@@ -10,6 +10,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo $siteUrl .  "resources/css/bootstrap.min.css"; ?>">
+    <link rel="stylesheet" href="<?php echo $siteUrl .  "resources/css/bootstrap-dialog.min.css"; ?>">
 
     <link rel="stylesheet" href="<?php echo $siteUrl .  "resources/css/font-awesome.min.css"; ?>">
 
@@ -24,10 +25,14 @@
       <script src="//www.oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//www.oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
+
+    <script src="<?php echo $siteUrl . "resources/js/jquery-1.11.3.js"; ?>"></script>
+    <script src="<?php echo $siteUrl . "resources/js/bootstrap.min.js"; ?>"></script>
+    <script src="<?php echo $siteUrl . "resources/js/bootstrap-dialog.min.js"; ?>"></script>
+    <script src="<?php echo $siteUrl . "resources/js/smooth-scroll.min.js"; ?>"></script>
+    <script src="<?php echo $siteUrl . "resources/js/script.js"; ?>"></script>
   </head>
   <body>
-    <?php include "views/frontend/masuk.php" ?>
-    <?php include "views/frontend/daftar.php" ?>
 
     <header class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -39,16 +44,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="<?php echo $siteUrl ?>">
           <img src="<?php echo $siteUrl . "resources/images/logo.png";?>" alt="Logo E-kosan">
         </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-        <form action="index.php?action=search" method="post">
+        <form action="cari_alamat.php" method="post">
           <div class="form-inline">
               <div class="form-group input-group pull-right">
-                  <input type="text" class="form-control" name="query" placeholder="Cari alamat kosan">
+                  <input type="text" class="form-control" name="address" placeholder="Cari alamat kosan">
                   <span class="input-group-btn">
                       <button type="submit" class="btn btn-default"><i class="fa fa-search fa-fw"></i></button>
                   </span>
@@ -58,12 +63,12 @@
 
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="index.php">Beranda</a></li>
+            <li><a href="<?php echo $siteUrl ?>">Beranda</a></li>
             <?php if (isset($_SESSION['logged_in_user'])) { ?>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Hai, <?= $_SESSION['logged_in_user']['full_name'] ?><span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Profil</a></li>
+                  <li><a href="profil.php">Profil</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a data-toggle="modal" href="<?= $siteUrl ?>logout.php">Keluar</a></li>
                 </ul>
@@ -73,9 +78,73 @@
               <li><a data-toggle="modal" href="#modalMasuk">Masuk</a></li>
               <li><a data-toggle="modal" href="#modalDaftar">Daftar</a></li>
             <?php } ?>
-            <li><a data-scroll href="#beginning" rel="beginning" data-placement="bottom" title="Kembali Ke Atas"><i class="fa fa-angle-double-up"></i></a></li>
+            <li><a data-scroll href="#beginning" data-placement="bottom" title="Kembali Ke Atas"><i class="fa fa-angle-double-up"></i></a></li>
           </ul>
         </div><!-- /.collapse -->
       </div><!-- /.container -->
     </header>
+
+    <!-- Modal Masuk -->
+    <div class="modal fade" id="modalMasuk" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Masuk</h4>
+          </div>
+          <div class="modal-body">
+            <form action="auth.php?action=login" method="post">
+              <?php if (isset($_SESSION['error']['login'])) { ?>
+                <div class="alert alert-danger">
+                  <ul class="list-unstyled">
+                    <?php
+                    foreach ($_SESSION['error']['login'] as $value) {
+                      echo "<li>" . $value . "</li>";
+                    } ?>
+                    <li></li>
+                  </ul>
+                </div>
+              <?php } ?>
+              <div class="form-group">
+                <label for="username">Username <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="username" autofocus>
+              </div>
+              <div class="form-group">
+                  <label for="password">Password <span class="text-danger">*</span></label>
+                  <input type="password" class="form-control" name="password">
+              </div>
+              <div class="form-group">
+                <label for="status">Status <span class="text-danger">*</span></label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="radio-inline">
+                        <input type="radio" name="status" value="pencari_kos" checked> Pencari Kos
+                      </label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="radio-inline">
+                        <input type="radio" name="status" value="pemilik_kos"> Pemilik Kos
+                      </label>
+                    </div>
+                  </div>
+              </div>
+              <div class="form-group">
+                <span class="text-danger">*</span> wajib diisi
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <button type="submit" class="btn bg-maroon btn-flat">Masuk</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="lupa_password.php">Lupa Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 

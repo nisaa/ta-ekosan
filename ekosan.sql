@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 26 Mei 2016 pada 16.42
+-- Generation Time: 29 Jul 2016 pada 19.12
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -53,15 +53,42 @@ CREATE TABLE `fasilitas_kamar` (
   `internet` varchar(10) NOT NULL,
   `kulkas` varchar(10) NOT NULL,
   `rak_buku` varchar(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `fasilitas_kamar`
 --
 
 INSERT INTO `fasilitas_kamar` (`kode_kosan`, `kamar_mandi_dalam`, `tempat_tidur`, `lemari`, `meja`, `ac`, `tv`, `tv_kabel`, `kipas_angin`, `air_panas`, `telepon`, `wastafel`, `internet`, `kulkas`, `rak_buku`) VALUES
+('0', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
 ('12002', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', ''),
-('12003', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '');
+('12003', '', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', ''),
+('12009', '', '', 'yes', 'yes', '', '', '', '', '', '', '', '', '', ''),
+('12010', '', 'yes', '', '', '', '', '', '', '', '', '', '', '', ''),
+('12011', 'yes', 'yes', 'yes', 'yes', '', '', '', '', 'yes', '', '', '', '', 'yes'),
+('12012', '', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', ''),
+('12013', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', ''),
+('12014', '', 'yes', 'yes', '', '', '', '', '', '', '', '', 'yes', '', ''),
+('12015', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12016', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12017', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12018', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12019', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12020', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12021', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12022', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12023', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12024', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12025', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12026', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12027', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12028', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12029', 'no', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12030', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'yes', 'no', 'no'),
+('12031', 'yes', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'yes', 'no', 'yes', 'yes', 'no', 'yes'),
+('12032', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'yes', 'no', 'no'),
+('12034', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'yes', 'no', 'yes'),
+('12037', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -91,8 +118,35 @@ CREATE TABLE `fasilitas_terdekat` (
 --
 
 INSERT INTO `fasilitas_terdekat` (`kode_kosan`, `warnet`, `warteg`, `balai_kesehatan`, `masjid`, `gereja`, `bank`, `indomaret`, `alfamart`, `circle_k`, `mall`, `supermarket`, `rumah_sakit`, `akses_transportasi`) VALUES
-('12003', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', ''),
-('12002', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '');
+('12002', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', ''),
+('12003', '', 'yes', '', 'yes', '', '', '', '', '', '', '', '', ''),
+('12013', '', 'yes', 'yes', 'yes', '', '', 'yes', '', '', '', '', '', ''),
+('12014', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12015', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12016', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12017', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12018', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12019', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12020', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12021', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12022', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12023', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12024', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12025', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12026', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12027', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12028', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12009', '', 'yes', '', 'yes', '', '', 'yes', '', '', '', '', '', ''),
+('12010', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', ''),
+('12011', '', 'yes', 'yes', 'yes', '', '', 'yes', '', '', '', '', 'yes', 'yes'),
+('12012', '', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', ''),
+('12029', 'no', 'yes', 'no', 'yes', 'no', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'yes'),
+('0', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12030', 'no', 'yes', 'yes', 'yes', 'no', 'no', 'yes', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12031', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'no', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12032', 'yes', 'yes', 'no', 'yes', 'no', 'yes', 'no', 'yes', 'no', 'no', 'no', 'no', 'no'),
+('12034', 'no', 'yes', 'yes', 'yes', 'no', 'no', 'yes', 'no', 'no', 'no', 'no', 'no', 'yes'),
+('12037', '', 'yes', 'yes', 'yes', '', '', 'yes', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -124,7 +178,34 @@ CREATE TABLE `fasilitas_umum` (
 
 INSERT INTO `fasilitas_umum` (`kode_kosan`, `dapur_bersama`, `ruangan_tamu`, `parkir_motor`, `parkir_mobil`, `kamar_mandi_bersama`, `kulkas_bersama`, `kantin`, `mesin_cuci`, `wifi`, `pembantu`, `tv_bersama`, `cctv`, `ruangan_makan`, `dispenser`) VALUES
 ('12002', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', ''),
-('12003', 'yes', 'yes', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '');
+('12003', 'yes', '', 'yes', '', 'yes', '', '', '', '', '', '', '', '', ''),
+('12013', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', '', ''),
+('12014', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12015', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12016', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12017', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12018', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12019', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12020', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12021', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12022', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12023', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12024', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12025', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12026', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12027', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12028', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12009', '', '', 'yes', '', 'yes', '', '', '', '', '', '', '', '', ''),
+('12010', 'yes', '', 'yes', '', 'yes', '', '', '', '', 'yes', '', '', '', ''),
+('12011', 'yes', 'yes', 'yes', '', 'yes', '', '', '', 'yes', 'yes', '', '', '', ''),
+('12012', '', 'yes', 'yes', '', 'yes', '', '', '', '', '', '', '', '', ''),
+('12029', 'yes', 'no', 'yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'no', 'no', 'no', 'no'),
+('12030', 'yes', 'no', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no'),
+('12031', 'no', 'yes', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'yes', 'no', 'yes', 'yes', 'yes', 'yes'),
+('12032', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'yes', 'no', 'no', 'no', 'no', 'no'),
+('12037', 'yes', 'yes', 'yes', '', '', '', '', '', '', '', '', '', '', ''),
+('12034', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'yes', 'no', 'no', 'no', 'no', 'no'),
+('0', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -158,8 +239,8 @@ CREATE TABLE `kosan` (
   `gambar_kosan` varchar(200) NOT NULL,
   `kode_pembuat` varchar(100) NOT NULL,
   `nama_pemilik` varchar(100) NOT NULL,
-  `nomor_tlp` varchar(100) NOT NULL,
-  `nomor_tlp2` varchar(15) NOT NULL,
+  `nomor_tlp` varchar(20) NOT NULL,
+  `nomor_tlp2` varchar(20) NOT NULL,
   `url_alias` varchar(100) NOT NULL,
   `status_kosan` varchar(50) NOT NULL,
   `jumlah_view` varchar(50) NOT NULL
@@ -170,8 +251,18 @@ CREATE TABLE `kosan` (
 --
 
 INSERT INTO `kosan` (`kode_kosan`, `nama_kosan`, `alamat_kosan`, `type_kosan`, `jenis_hunian`, `kategori_kampus`, `harga_kosan`, `harga_sewa2`, `keterangan`, `gambar_kosan`, `kode_pembuat`, `nama_pemilik`, `nomor_tlp`, `nomor_tlp2`, `url_alias`, `status_kosan`, `jumlah_view`) VALUES
-(12002, 'Ibu Ade', 'Jl. IR.H.Juanda, Gg. Abah Tamim ', '/Bln', 'Pria & Wanita', 'UNIKOM, ITHB, UNPAD, ITB', '500000', 'Rp. 500.000,-/Bln', 'Kosan Ibu Ade', 'Ibu Ade.jpg', 'admin', 'Ibu Ade', '0228-8585-8585', '5285-8285-____', 'Jl. IR.H.Juanda, Gg. Abah Tamim ', 'setuju', '30'),
-(12003, 'Kosan Ima', 'Jl. Bandung TImur No 67967', '/Bln', 'Pria & Wanita', 'Dekat Kampus Lain', '600000', 'Rp. 500.000 - 600.000 /Bln', 'Kosan Bersih man nyaman', 'Kosan Ima.png', 'admin', 'Ibu Ima', '4534-5345-3453', '4534-5345-34__', 'Jl-Bandung-TImur-No-67967', 'setuju', '10');
+(12002, 'Kosan Ibu Ade', 'Jl. IR.H.Juanda, Gg. Abah Tamim ', '/Bln', 'Pria & Wanita', 'UNIKOM, ITHB, UNPAD, ITB', '500000', 'Rp. 500.000/Bln', 'Kosan Ibu Ade merupakan kosan yang bersih dan nyaman. Kosan ini dilengkapi dengan beragam fasilitas yang akan menunjang kebutuhan penghuni kosan', 'Ibu Ade.jpg', 'admin', 'Ibu Ade', '0228-8585-85', '085763518084', 'Jl. IR.H.Juanda, Gg. Abah Tamim ', 'setuju', '32'),
+(12003, 'Kosan Ima', 'Jl. Bandung Timur No 67', '/Bln', 'Pria & Wanita', 'Dekat Kampus Lain', '600000', 'Rp. 500.000 - 600.000/Bln', 'Kosan bersih dan nyaman. Dengan harga yang murah penghuni kosan dapat merasakan berbagai fasilitas kamar dan fasilitas umum yang tersedia di kosan', 'kos6.jpg', 'admin', 'Ibu Ima', '0221-5345-34', '081365740978', 'Jl-Bandung-TImur-No-67', 'setuju', '12'),
+(12013, 'Kosan Ibu Restu', 'Jl. Dago Timur No. 19', '/Bln', 'Pria', 'UNIKOM, ITHB, UNPAD, ITB', '850000', 'Rp 850.000/Bln', 'Kosan Ibu Restu merupakan kosan yang nyaman dan aman. Lokasi kosan strategis dekat dengan toserba, tempat makan, dan apotik', '', 'admin', 'Ibu Restu', '088863215463', '081364791274', 'Jl-Dago-Timur-19', 'setuju', '25'),
+(12014, 'Kosan Lilis', 'Jl. Ir. H. Djuanda 117', '/Bln', 'pria', 'UNIKOM, ITHB, UNPAD, ITB', '500000', 'Rp 500.000/Bln', 'Kosan bersih dan nyaman. Dilengkapi dengan wifi yang akan membuat penghuni kosan merasa betah', ' . jpg', 'lilis', 'hgfjdsh', 'jfhjsd', 'hfjdsah', '', '', ''),
+(12012, 'Kosan Ibu Rini', 'Jl. Bangbayang No. 64', '/Bln', 'Pria & Wanita', 'UNIKOM, ITHB, UNPAD, ITB', '750000', 'Rp 750.000/Bln', 'Kosan ini diperuntukan bagi pria dan wanita. Menyediakan berbagai macam fasilitas untuk membuat penghuni kosan merasa aman dan nyaman', '', 'admin', 'Ibu Rini', '081274675883', '085671758481', 'Jl-Bangbayang-64', 'setuju', '29'),
+(12011, 'Kosan Pak Suherwan', 'Jl. Cisitu Lama Gg. 7 No. 31', '/Thn', 'Pria', 'UNIKOM, ITHB, UNPAD, ITB', '10000000', 'Rp 10.000.000 - 14.000.000/Thn', 'Kosan Pak Suherwan memiliki harga yang bervariasi tergantung keadaan kamar. Kamar dengan kamar mandi dalam & water heater 14jt/thn.', 'kos7.jpg', 'admin', 'Pak Suherwan', '081274516666', '', 'Jl-Cisitu-Lama-Gg-7-No-31', 'setuju', '74'),
+(12010, 'Kos Ibu Farida', 'Jl. Terusan Buah Batu No. 20 Bandung', '/Thn', 'Pria & Wanita', 'TELKOM UNIVERSITY', '5500000', 'Rp 5.500.000/Thn', 'Kosan Ibu Farida aman dan nyaman. Kosan ini sangat startegis karena dekat dengan Telkom University, tempat makan, tempat ibadah, dan apotik', 'kos5.jpg', 'admin', 'Ibu Farida', '081354767681', '089715653566', 'Jl-Terusan-Buah-Batu-20', 'setuju', '56'),
+(12009, 'Kosan Cemara', 'Jl. Sekeloa No. 10 Bandung', '/Bln', 'Wanita', 'UNIKOM, ITHB, UNPAD, ITB', '450000', 'Rp 450.000/Bln', 'Kosan Cemara merupakan kos khusus putri. Kosan ini terletak di Jl. Sekeloa No. 10. Kosan ini tergolong aman karena terdapat penjaga kosan', 'kos4.jpg', 'admin', 'Bapak Adi', '085646371728', '081157376765', 'Jl-Sekeloa-10', 'setuju', '41'),
+(12029, 'Kosan Kenanga', 'Jl. Ir. H. Djuanda no. 165', '/Bln', 'wanita', 'UNIKOM, ITHB, UNPAD, ITB', '650000', 'Rp 650.000/Bln', 'Kosan kenanga merupakan kosan putri yang bersih dan nyaman. Kamar kosan sudah dilengkapi tempat tidur, lemari, dan meja. Harga terjangkau', 'Kosan Kenanga-9181848a960a195abf4f29dad2536c4cec010c76.jpg', 'tiara', 'Ibu Tuti', '085681672683', '085435721767', '', '', ''),
+(12030, 'Kosan Bunga', 'Jl. Buah Batu no. 63', '/Bln', 'Pria & Wanita', 'TELKOM UNIVERSITY', '700000', 'Rp 700.000/Bln', 'Kosan Bunga merupakan kosan yang bersih dan nyaman untuk ditinggali. Lantai pertama ditempati oleh wanita dan lantai kedua ditempati oleh pria.', 'Kosan Bunga-d30713a5e6f715d2e4e4be3843b9ebeae4b455e1.', 'dinda', 'Ibu Herawati', '087167637671', '081676275735', '', '', ''),
+(12031, 'Kosan Kencana', 'Jl. Wastukencana 50 A', '/Bln', 'pw', 'UNISBA, UNPAS', '1900000', 'Rp 1.900.000/Bln', 'Kosan eksklusif di pusat kota Bandung. Dekat dengan sarana pendidikan kampus serta dilengkapi dengan beragam fasilitas yang memadai', 'Kosan Kencana-1d0ed214a4133bb02424c36f4d702a15ccb373b2.JPG', 'amelia', 'Bapak Riyan', '081320348288', '022-4233101', '', '', ''),
+(12032, 'Wisma Shafira', 'Jl. PGA No. 113 Bandung', '/Thn', 'Pria & Wanita', 'TELKOM UNIVERSITY', '5000000', 'Rp 5.000.000/Thn', 'Kost-kostan ini terdapat 2 lantai dan tersedia untuk putra dan putri. Namun jangan khawatir, tempat kost putra dan putri dipisahkan oleh lorong tangga.', 'Wisma Shafira-529632cd425a74d2dbffc4b398819f3be870f726.JPG', 'adi', 'Ibu H. Sri', '08122160079', '022-5207801', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -192,8 +283,34 @@ CREATE TABLE `lokasi` (
 --
 
 INSERT INTO `lokasi` (`kode_kosan`, `nama`, `alamat`, `lat`, `lon`) VALUES
-('12002', '', '', -6.883921, 107.617416),
-('12003', 'Kosan Ima', 'Jl. Bandung TImur No 679', -6.891079, 107.618011);
+('0', '107.60548365380862', '107.60548365380862', 107.605484, 107.605484),
+('12002', 'Kosan Ibu Ade', 'Jl. IR.H.Juanda, Gg. Abah Tamim', -6.883921, 107.617416),
+('12003', 'Kosan Ima', 'Jl. Bandung Timur No 67', -6.914937, 107.605484),
+('12009', 'Kosan Cemara', 'Jl. Sekeloa No. 10 Bandung', -6.914937, 107.605484),
+('12010', 'Kos Ibu Farida', 'Jl. Terusan Buah Batu No. 20 Bandung', -6.914937, 107.605484),
+('12011', 'Kosan Pak Suherwan', 'Jl. Cisitu Lama Gg. 7 No. 31', -6.914937, 107.605484),
+('12012', 'Kosan Ibu Rini', 'Jl. Bangbayang No. 64', -6.914937, 107.605484),
+('12013', 'Kosan Ibu Restu', 'Jl. Dago Timur No. 19', -6.914937, 107.605484),
+('12014', 'hfjashjk', 'fksak', 0.000000, 0.000000),
+('12015', 'hfjashjk', 'fksak', 0.000000, 0.000000),
+('12016', 'hfjashjk', 'fksak', 107.605484, 107.605484),
+('12017', 'Balala', 'Kosan Jalan', 107.621262, 107.621262),
+('12018', 'Balala', 'Kosan Jalan', 107.621262, 107.621262),
+('12019', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12020', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12021', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12022', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12023', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12024', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12025', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12026', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12027', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12028', 'Baalal', 'Baalal', 107.210487, 107.210487),
+('12029', 'Kosan Kenanga', 'Jl. Ir. H. Djuanda no. 165', 0.000000, 0.000000),
+('12030', 'Kosan Bunga', 'Jl. Buah Batu no. 63', -6.939378, 107.624474),
+('12031', 'Kosan Kencana', 'Jl. Wastukencana 50 A', 0.000000, 0.000000),
+('12032', 'Wisma Shafira', 'Jl. PGA No. 113 Bandung', 0.000000, 0.000000),
+('12034', '107.60548365380862', '107.60548365380862', -6.914937, 107.605484);
 
 -- --------------------------------------------------------
 
@@ -215,8 +332,29 @@ CREATE TABLE `mayoritas_penghuni` (
 --
 
 INSERT INTO `mayoritas_penghuni` (`kode_kosan`, `pelajar`, `mahasiswa`, `mahasiswi`, `karyawan`, `karyawati`) VALUES
+('0', 'no', 'no', 'no', 'no', 'no'),
 ('12002', 'yes', 'yes', 'yes', 'yes', ''),
-('12003', 'yes', 'yes', 'yes', '', '');
+('12003', '', 'yes', '', 'yes', ''),
+('12013', '', 'yes', 'yes', '', ''),
+('12016', 'no', 'no', 'no', 'no', 'no'),
+('12017', 'no', 'no', 'no', 'no', 'no'),
+('12018', 'no', 'no', 'no', 'no', 'no'),
+('12019', 'no', 'no', 'no', 'no', 'no'),
+('12020', 'no', 'no', 'no', 'no', 'no'),
+('12021', 'no', 'no', 'no', 'no', 'no'),
+('12022', 'no', 'no', 'no', 'no', 'no'),
+('12023', 'no', 'no', 'no', 'no', 'no'),
+('12024', 'no', 'no', 'no', 'no', 'no'),
+('12025', 'no', 'no', 'no', 'no', 'no'),
+('12026', 'no', 'no', 'no', 'no', 'no'),
+('12027', 'no', 'no', 'no', 'no', 'no'),
+('12028', 'no', 'no', 'no', 'no', 'no'),
+('12029', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12030', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12031', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12032', 'no', 'no', 'no', 'no', 'no'),
+('12034', 'yes', 'yes', 'yes', 'yes', 'yes'),
+('12037', '', '', 'yes', '', 'yes');
 
 -- --------------------------------------------------------
 
@@ -227,10 +365,10 @@ INSERT INTO `mayoritas_penghuni` (`kode_kosan`, `pelajar`, `mahasiswa`, `mahasis
 CREATE TABLE `members` (
   `user_id` int(11) NOT NULL,
   `username` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `email` varchar(50) NOT NULL,
   `full_name` varchar(50) NOT NULL,
-  `alamat` text NOT NULL,
+  `alamat` varchar(255) NOT NULL,
   `gambar` varchar(200) NOT NULL,
   `telp` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -260,7 +398,16 @@ INSERT INTO `members` (`user_id`, `username`, `password`, `email`, `full_name`, 
 (19, 'aaa', '1234', 'amurisin@yahoo.com', 'Aaa', '', '', ''),
 (20, 'irma', '1234', 'irma@gmial.com', 'Irma', '', '', ''),
 (21, 'bayu', '1234', 'budi@gmail.com', 'Bayu', '', '', ''),
-(22, 'budiman', '123456', 'budiman@gmail.com', 'Budiman', '', '', '');
+(22, 'budiman', '123456', 'budiman@gmail.com', 'Budiman', '', '', ''),
+(23, 'dina', '$2y$12$TmcmXXRgZVBmI1A5SitlL.37F', 'auliaaudina@gmail.com', 'Aulia Audina', '', '', ''),
+(24, 'adam', '$2y$12$TmcmXXRgZVBmI1A5SitlL.xj9', 'adam@gmail.com', 'Akhmad Adam', '', '', ''),
+(25, 'quin', '$2y$12$TmcmXXRgZVBmI1A5SitlL.DQX', 'quin@gmail.com', 'Quinov Olivia', '', '', ''),
+(26, 'annisa', '$2y$12$TmcmXXRgZVBmI1A5SitlL.452', 'miegoreng10@gmail.com', 'Annisa Amelia', '', '', ''),
+(27, 'yogi', '$2y$12$TmcmXXRgZVBmI1A5SitlL.wxGsefXT42W57uKET6Q34.d01adDufu', 'hansyogi@gmail.com', 'Hans Yogi', '', '', ''),
+(28, 'yeni', '$2y$12$TmcmXXRgZVBmI1A5SitlL.cR34GTLuEXhhSMeSNVaqXkYViMMcWCq', 'yeniy@gmail.com', 'Yeni Yulia', '', '', ''),
+(29, 'amelia', '$2y$12$TmcmXXRgZVBmI1A5SitlL.lttH2QYyPlx2yX6XBSM.hNJ0KIDdhKC', 'amelia@gmail.com', 'Amelia', 'Jl. Lengkong Kecil No. 18 Bandung', 'tulips.jpg', '081365980372'),
+(30, 'putra', '$2y$12$TmcmXXRgZVBmI1A5SitlL.Xsgm37xLzzDjsQJV0Kso7LprPlP1so6', 'putra@gmail.com', 'Irawan Putra', 'Jl. Haur Pancuh no. 44', '', '083876593251'),
+(31, 'andreas', '$2y$12$TmcmXXRgZVBmI1A5SitlL.LXSnBLFBI81t.Xc2fXuvWT18VX6p5qS', 'andreas96@gmail.com', 'Andreas', 'Jl. Patimura 76', '', '081245879082');
 
 -- --------------------------------------------------------
 
@@ -270,8 +417,8 @@ INSERT INTO `members` (`user_id`, `username`, `password`, `email`, `full_name`, 
 
 CREATE TABLE `pemilik_kos` (
   `user_id` int(11) NOT NULL,
-  `username_pemilik` varchar(32) NOT NULL,
-  `password_pemilik` varchar(32) NOT NULL,
+  `username` varchar(32) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `email` varchar(50) NOT NULL,
   `full_name` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
@@ -283,7 +430,7 @@ CREATE TABLE `pemilik_kos` (
 -- Dumping data untuk tabel `pemilik_kos`
 --
 
-INSERT INTO `pemilik_kos` (`user_id`, `username_pemilik`, `password_pemilik`, `email`, `full_name`, `alamat`, `gambar`, `telp`) VALUES
+INSERT INTO `pemilik_kos` (`user_id`, `username`, `password`, `email`, `full_name`, `alamat`, `gambar`, `telp`) VALUES
 (14, 'tabri', '1234', 'tabri@gmail.com', 'Tabri Bo', 'asdadada', '', '32423424234'),
 (15, 'baik', '1234', 'upaytonji@gmail.com', 'Baik', '', '', ''),
 (16, 'jotos', '1234', '1234@sdfsfd', 'Jotos', '', '', ''),
@@ -292,7 +439,11 @@ INSERT INTO `pemilik_kos` (`user_id`, `username_pemilik`, `password_pemilik`, `e
 (19, 'aaa', '1234', 'amurisin@yahoo.com', 'Aaa', '', '', ''),
 (20, 'irma', '1234', 'irma@gmial.com', 'Irma', '', '', ''),
 (21, 'bayu', '1234', 'budi@gmail.com', 'Bayu', '', '', ''),
-(22, 'budiman', '123456', 'budiman@gmail.com', 'Budiman', '', '', '');
+(22, 'budiman', '123456', 'budiman@gmail.com', 'Budiman', '', '', ''),
+(23, 'tiara', '$2y$12$TmcmXXRgZVBmI1A5SitlL.yT8urZ8DKQhYqWsqCoJPcDcHbyxgFhO', 'tiarafania@gmail.com', 'Tiara Fania', '', '', ''),
+(24, 'lilis', '$2y$12$TmcmXXRgZVBmI1A5SitlL.DAaOAeIZg39dRROIh62kucCxtCAaPcy', 'lilisekawati@gmail.com', 'Lilis Ekawati', '', '', ''),
+(25, 'adi', '$2y$12$TmcmXXRgZVBmI1A5SitlL.xu2I./HqtX8hAxLkWeTmLNrAuT0Bus6', 'adisantoso@gmail.com', 'Adi Santoso', '', '', ''),
+(26, 'dinda', '$2y$12$TmcmXXRgZVBmI1A5SitlL.yRmyaKAXu8/1XtCbbtYiha9WDdXwjC2', 'dindasabila@gmail.com', 'Dinda Sabila', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -344,7 +495,12 @@ INSERT INTO `pertanyaan` (`kode_pertanyaan`, `user_id`, `judul`, `pertanyaan`) V
 (7, '7', 'Coba lagi', 'Kamu bisa gak?'),
 (8, '7', 'Sudah Makan Blm', 'Jangan Lupa makan ya...'),
 (9, '2', '', 'miminnn'),
-(10, '2', '', 'Minmi ini udah subuh');
+(10, '2', '', 'Minmi ini udah subuh'),
+(11, '', 'Test', 'Kapan semua kosan saya disetujui?'),
+(12, '22', 'Kirim Pesan', 'Uji coba kirim pesan ke admin'),
+(13, '', 'Test', 'Test kirim pesan ke admin'),
+(14, '31', 'Testing', 'Coba kirim pesan ke admin'),
+(15, '26', 'Uji Coba', 'Uji coba kirim pesan ke admin');
 
 -- --------------------------------------------------------
 
@@ -374,6 +530,25 @@ INSERT INTO `tanya_status` (`kode_tanya`, `user_id`, `kode_kosan`, `pertanyaan`,
 --
 
 --
+-- Indexes for table `fasilitas_kamar`
+--
+ALTER TABLE `fasilitas_kamar`
+  ADD PRIMARY KEY (`kode_kosan`),
+  ADD KEY `kode_kosan` (`kode_kosan`);
+
+--
+-- Indexes for table `fasilitas_terdekat`
+--
+ALTER TABLE `fasilitas_terdekat`
+  ADD PRIMARY KEY (`kode_kosan`);
+
+--
+-- Indexes for table `fasilitas_umum`
+--
+ALTER TABLE `fasilitas_umum`
+  ADD PRIMARY KEY (`kode_kosan`);
+
+--
 -- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
@@ -383,6 +558,18 @@ ALTER TABLE `galeri`
 -- Indexes for table `kosan`
 --
 ALTER TABLE `kosan`
+  ADD PRIMARY KEY (`kode_kosan`);
+
+--
+-- Indexes for table `lokasi`
+--
+ALTER TABLE `lokasi`
+  ADD PRIMARY KEY (`kode_kosan`);
+
+--
+-- Indexes for table `mayoritas_penghuni`
+--
+ALTER TABLE `mayoritas_penghuni`
   ADD PRIMARY KEY (`kode_kosan`);
 
 --
@@ -428,17 +615,17 @@ ALTER TABLE `galeri`
 -- AUTO_INCREMENT for table `kosan`
 --
 ALTER TABLE `kosan`
-  MODIFY `kode_kosan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12004;
+  MODIFY `kode_kosan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12038;
 --
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT for table `pemilik_kos`
 --
 ALTER TABLE `pemilik_kos`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `pengelola`
 --
@@ -448,7 +635,7 @@ ALTER TABLE `pengelola`
 -- AUTO_INCREMENT for table `pertanyaan`
 --
 ALTER TABLE `pertanyaan`
-  MODIFY `kode_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `kode_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tanya_status`
 --

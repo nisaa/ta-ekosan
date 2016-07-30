@@ -15,11 +15,6 @@ h6 {
 
 /* BOOTSTRAP ELEMENT OVERRIDES */
 /* NAVBAR */
-.navbar {
-    border: none;
-    background-color: #fff;
-}
-
 .navbar-brand {
     height: auto;
 }
@@ -31,7 +26,7 @@ h6 {
 
 .navbar-default .navbar-nav li a {
     color: #000;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -46,6 +41,74 @@ h6 {
     font-weight: bold;
 }
 
+.navbar-default .navbar-toggle {
+    margin: 20px 15px 8px 0;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+           transition: all 0.3s ease-in-out;
+    border-top: 2px solid transparent;
+}
+
+.navbar-default .navbar-brand {
+    -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+           transition: all 0.3s ease-in-out;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #e21414;
+}
+
+.navbar-nav > li > a {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #e21414;
+    padding-bottom: 10px;
+}
+
+.navbar-default.attached {
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    border-bottom: 2px solid #e74c3c;
+}
+
+.navbar-default.attached .navbar-brand {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #212121;
+}
+
+.navbar-default.attached .navbar-nav > li > a {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 2px;
+}
+
+/* COMMON ELEMENTS */
 #beginning {
     height: 768px;
 }
@@ -91,12 +154,16 @@ label {
     background-color: #f6f6f6;
 }
 
+#kost-detail {
+    padding-top: 100px;
+}
+
 #campus {
     background-color: #fff;
 }
 
 #map {
-    width: 820px;
+    width: 100%;
     height: 330px;
     margin-bottom: 10px;
 }
@@ -155,6 +222,157 @@ label {
     color: #fff;
 }
 
+#forget-password {
+    padding-bottom: 29px;
+}
+
+.login-box {
+    margin-top: 150px;
+    -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,.1);
+    box-shadow: 0px 0px 2px rgba(0,0,0,.1);
+}
+
+.login-box-header {
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    background: #f3f3f3;
+}
+
+#profile {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.display-setting {
+    padding-top: 100px;
+}
+
+.btn-more {
+    margin-left: 42%;
+}
+
+/* ABOUT */
+#about, #visi-misi, #address {
+    background-color: #fff;
+    font-size: 15px;
+    padding-bottom: 50px;
+}
+
+.about-ekosan {
+    padding-top: 100px;
+}
+
+.ekosan-picture {
+    text-align: center;
+    color: #000;
+}
+
+.vision {
+    background-color: #e21414;
+    color: #fff;
+    height: 200px;
+    padding: 15px;
+}
+
+.mission {
+    background-color: #fa6900;
+    color: #fff;
+    height: 200px;
+    padding: 15px;
+}
+
+.vision h3, .mission h3 {
+    text-align: center;
+}
+
+.fa-map-marker {
+    font-size: 35px;
+    color: #e21;
+    padding-left: 49%;
+}
+
+.add-location {
+    text-align: center;
+}
+
+.ekosan-map {
+    width: 100%;
+}
+
+/* FAQ */
+.faq {
+    background-color: #f6f6f6;
+    font-size: 15px;
+    color: #000;
+}
+
+.faqs {
+    padding-top: 100px;
+    color: #000;
+}
+
+.operational-hour {
+    padding-top: 20px;
+    color: #000;
+}
+
+.text-danger {
+    color: #e21414;
+    font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: #f6f6f6;
+}
+
+.title {
+    color: #000;
+    font-size: 15px;
+}
+
+.contact, .address {
+    color: #000;
+}
+
+.info {
+    padding-top: 10px;
+    text-align: left;
+}
+
+.btn-contact {
+  background: transparent;
+  border: 2px solid #d81b60;
+  color: #d81b60;
+  text-transform: uppercase;
+}
+
+.btn-contact:active,
+.btn-contact:focus,
+.btn-contact:hover {
+  background: #d81b60;
+  color: #fff;
+}
+
+/* PROFILE */
+#profile, #edit-profil {
+    padding-top: 100px;
+}
+
+.panel {
+    margin-top: 10px;
+}
+
+.display-picture img {
+    width: 80px;
+    height: 65px;
+}
+
+/* FOOTER */
 .footer a {
     color: #fff;
 }
@@ -175,10 +393,9 @@ label {
     width: 100%;
 }
 
-.navbar-default .navbar-toggle {
-    margin: 20px 15px 8px 0;
+.copyright {
+    padding-left: 10%;
 }
-
 
 /* For media 768px and larger */
 @media (min-width: 768px) {
@@ -194,11 +411,10 @@ label {
     }
 }
 
-/* Lebar kurang dari 992, height & widthnya 100% */
-@media (min-width: 992px) {
-    .item .image img {
-        height: 100%;
-        width: 100%;
+/* Width < 992, height & widthnya 100% */
+@media (max-width: 767px) {
+    #beginning {
+        height: auto;
     }
 }
 
@@ -211,12 +427,24 @@ label {
     .intro-description {
         padding-top: 180px;
     }
-}
-// <= 767px
-@media (max-width: 767px) {
-    #beginning {
-        height: auto;
+
+    .footer {
+        font-size: 14px;
+        height: 100px;
     }
 }
+
+@media (min-width: 992px) {
+    .col-md-offset-3 {
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-offset-3 {
+        margin-left: 5%;
+    }
+}
+
 
 
