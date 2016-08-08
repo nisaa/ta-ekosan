@@ -6,9 +6,6 @@ include "config/app.php";
 include "config/database.php";
 
 $kost = new App\Kost;
-$kosts = $kost->fetch();
+$kosts = $kost->fetchKostForTelkom();
 
-$kos = new App\Kost;
-$kosan = $kos->fetchNewDataKost();
-
-include "views/frontend/index.php";
+include "views/frontend/kosan_telkom.php";

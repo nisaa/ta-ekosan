@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,15 +106,15 @@
                 </div>
               <?php } ?>
               <div class="form-group">
-                <label for="username">Username <span class="text-danger">*</span></label>
+                <label>Username <span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="username" autofocus>
               </div>
               <div class="form-group">
-                  <label for="password">Password <span class="text-danger">*</span></label>
+                  <label>Password <span class="text-danger">*</span></label>
                   <input type="password" class="form-control" name="password">
               </div>
               <div class="form-group">
-                <label for="status">Status <span class="text-danger">*</span></label>
+                <label>Status <span class="text-danger">*</span></label>
                   <div class="row">
                     <div class="col-md-6">
                       <label class="radio-inline">

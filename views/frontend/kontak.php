@@ -40,21 +40,21 @@ if (mail('demo@localhost.com', $subjek, $pesan, $headers)) {
                     <div class="form-group">
                       <div class="row">
                         <div class="col-lg-6">
-                          <label for="nama">Nama*</label>
+                          <label>Nama <span class="text-danger">*</span></label>
                           <input type="text" class="form-control" name="nama" required>
                         </div>
                         <div class="col-lg-6">
-                          <label for="email">E-Mail*</label>
+                          <label>E-Mail <span class="text-danger">*</span></label>
                           <input type="text" class="form-control" name="email" required>
                         </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="subjek">Subjek*</label>
+                      <label>Subjek <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" name="subjek" required>
                     </div>
                     <div class="form-group">
-                      <label for="pesan">Pesan*</label>
+                      <label>Pesan <span class="text-danger">*</span></label>
                       <textarea name="pesan" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                     <button type="submit" name="submit" class="btn btn-contact btn-flat">Kirim</button>

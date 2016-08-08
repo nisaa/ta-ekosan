@@ -149,7 +149,7 @@ label {
     padding-top: 50px;
 }
 
-#kost {
+#favourite-kost, #new-kost {
     padding-top: 30px;
     background-color: #f6f6f6;
 }
@@ -251,6 +251,28 @@ label {
 
 .btn-more {
     margin-left: 42%;
+}
+
+.page-404 {
+    background: #fff;
+    background-image: url('../images/404-page.png');
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.another-link {
+    padding: 330px 0 0 540px;
+}
+
+.another-link li a {
+    color: #e21414;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.another-link li a:hover {
+    color: #bb3d43;
 }
 
 /* ABOUT */

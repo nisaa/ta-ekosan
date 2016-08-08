@@ -137,7 +137,7 @@ include "components/header.php";
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="panel-title"><?= $_SESSION['logged_in_user']['full_name'] ?></h3>
+                  <div class="panel-title"><?= $_SESSION['logged_in_user']['full_name'] ?></div>
                 </div>
                 <div class="panel-body">
                     <?php if(isset($_SESSION['success_message'])) { ?>
@@ -158,8 +158,8 @@ include "components/header.php";
                     </div>
                     <?php } unset($_SESSION['error']); ?>
                     <div class="row">
-                        <div class="col-md-3 col-lg-3" align="center">
-                            <img alt="User Pic" name="gambar" src="<?php echo $siteUrl . "resources/images/" . $_SESSION['logged_in_user']
+                        <div class="col-md-3 col-lg-3">
+                            <img alt="User Pic" src="<?php echo $siteUrl . "resources/images/" . $_SESSION['logged_in_user']
                             ['gambar'] ?>" class="img-circle img-responsive">
                         </div>
                         <div class=" col-md-9 col-lg-9 ">
@@ -184,21 +184,21 @@ include "components/header.php";
                 </div>
 
                 <div class="panel-footer">
-                  <a data-toggle="modal" href="#modalKirimPesan" type="button" class="btn btn-sm btn-primary btn-flat"><i class="fa fa-envelope"></i> Kirim Pesan ke Admin</a>
-                  <a href="edit_profil.php?action=edit&amp;<?= $_SESSION['logged_in_user']['status'] ?>&amp;id=<?= $_SESSION['logged_in_user']['user_id'] ?>" type="button" class="btn btn-sm btn-warning btn-flat"><i class="fa fa-edit"></i> Edit Profil</a>
+                  <a data-toggle="modal" href="#modalKirimPesan" class="btn btn-sm btn-primary btn-flat"><i class="fa fa-envelope"></i> Kirim Pesan ke Admin</a>
+                  <a href="edit_profil.php?action=edit&amp;<?= $_SESSION['logged_in_user']['status'] ?>&amp;id=<?= $_SESSION['logged_in_user']['user_id'] ?>" class="btn btn-sm btn-warning btn-flat"><i class="fa fa-edit"></i> Edit Profil</a>
 
                   <?php
                     if ($_SESSION['logged_in_user']['status'] == 'pemilik_kos') {
                   ?>
                   <span class="pull-right">
-                    <a href="tambah_kosan.php" type="button" class="btn btn-sm btn-success btn-flat"><i class="fa fa-plus"></i> Tambah Kosan</a>
+                    <a href="tambah_kosan.php"><button class="btn btn-sm btn-success btn-flat"><i class="fa fa-plus"></i> Tambah Kosan</button></a>
                   </span>
                 </div>
               </div>
 
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Data Kosan Anda</h3>
+                  <div class="panel-title">Data Kosan Anda</div>
                 </div>
                 <div class="panel-body">
                   <table class="table table-bordered table-hover">
@@ -246,8 +246,6 @@ include "components/header.php";
         </div>
     </div>
 </div>
-</div>
-</div>
 
 <!-- Modal Kirim Pesan -->
 <div class="modal fade" id="modalKirimPesan" tabindex="-1" role="dialog">
@@ -255,16 +253,16 @@ include "components/header.php";
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Kirim Pesan ke Admin</h4>
+        <div class="modal-title"><h4>Kirim Pesan ke Admin</h4></div>
       </div>
       <div class="modal-body">
         <form action="proses_tambah_pertanyaan.php" method="post">
           <div class="form-group">
-            <label for="subjek">Subjek</label>
-            <input type="text" class="form-control" name="judul" autofocus>
+            <label>Subjek</label>
+            <input type="text" class="form-control" name="judul">
           </div>
           <div class="form-group">
-              <label for="pertanyaan">Pertanyaan</label>
+              <label>Pertanyaan</label>
               <textarea name="pertanyaan" cols="10" rows="5" class="form-control"></textarea>
           </div>
           <div class="row">
@@ -277,6 +275,8 @@ include "components/header.php";
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>
 
 <script>

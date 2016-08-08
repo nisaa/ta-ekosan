@@ -38,4 +38,4 @@ $_SESSION['logged_in_user']['email'] = $data['email'];
 $_SESSION['logged_in_user']['telp'] = $data['phone'];
 $_SESSION['logged_in_user']['gambar'] = $data['picture'];
 
-header('Location: ' . $siteUrl . 'profil.php');
+// header('Location: ' . $siteUrl . 'profil.php');

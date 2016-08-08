@@ -161,15 +161,15 @@ include "components/header.php";
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="nama_kosan">Nama Kosan</label>
-                                                    <input type="text" class="form-control" name="nama_kosan" value="<?= $kos->nama_kosan ?>" autofocus>
+                                                    <label>Nama Kosan</label>
+                                                    <input type="text" class="form-control" name="nama_kosan" value="<?= $kos->nama_kosan ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="alamat_kosan">Alamat Kosan</label>
+                                                    <label>Alamat Kosan</label>
                                                     <input type="text" class="form-control" name="alamat_kosan" value="<?= $kos->alamat_kosan ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="jenis_hunian">Peruntukan Penghuni</label>
+                                                    <label>Peruntukan Penghuni</label>
                                                       <div class="row">
                                                         <div class="col-md-4">
                                                           <label class="radio-inline">
@@ -189,21 +189,21 @@ include "components/header.php";
                                                       </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="mayoritas_penghuni">Mayoritas Penghuni</label>
+                                                    <label>Mayoritas Penghuni</label>
                                                       <div class="row">
                                                         <div class="col-md-4">
                                                           <label class="checkbox-inline">
-                                                            <input type="checkbox" name="pelajar" id="pelajar"<?= ($m_penghuni->pelajar == 'yes') ? ' checked' : ''; ?>> Pelajar
+                                                            <input type="checkbox" name="pelajar" id="pelajar"<?= ($mPenghuni->pelajar == 'yes') ? ' checked' : ''; ?>> Pelajar
                                                           </label>
                                                         </div>
                                                         <div class="col-md-4">
                                                           <label class="checkbox-inline">
-                                                            <input type="checkbox" name="mahasiswa" id="mahasiswa"<?= ($m_penghuni->mahasiswa == 'yes') ? ' checked' : ''; ?>> Mahasiswa
+                                                            <input type="checkbox" name="mahasiswa" id="mahasiswa"<?= ($mPenghuni->mahasiswa == 'yes') ? ' checked' : ''; ?>> Mahasiswa
                                                           </label>
                                                         </div>
                                                         <div class="col-md-4">
                                                           <label class="checkbox-inline">
-                                                            <input type="checkbox" name="mahasiswi" id="mahasiswi"<?= ($m_penghuni->mahasiswi == 'yes') ? ' checked' : ''; ?>> Mahasiswi
+                                                            <input type="checkbox" name="mahasiswi" id="mahasiswi"<?= ($mPenghuni->mahasiswi == 'yes') ? ' checked' : ''; ?>> Mahasiswi
                                                           </label>
                                                         </div>
                                                       </div>
@@ -211,19 +211,19 @@ include "components/header.php";
                                                       <div class="row">
                                                         <div class="col-md-4">
                                                           <label class="checkbox-inline">
-                                                            <input type="checkbox" name="karyawan" id="karyawan"<?= ($m_penghuni->karyawan == 'yes') ? ' checked' : ''; ?>> Karyawan
+                                                            <input type="checkbox" name="karyawan" id="karyawan"<?= ($mPenghuni->karyawan == 'yes') ? ' checked' : ''; ?>> Karyawan
                                                           </label>
                                                         </div>
                                                         <div class="col-md-4">
                                                           <label class="checkbox-inline">
-                                                            <input type="checkbox" name="karyawati" id="karyawati"<?= ($m_penghuni->karyawati == 'yes') ? ' checked' : ''; ?>> Karyawati
+                                                            <input type="checkbox" name="karyawati" id="karyawati"<?= ($mPenghuni->karyawati == 'yes') ? ' checked' : ''; ?>> Karyawati
                                                           </label>
                                                         </div>
                                                       </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Lokasi Kampus Terdekat</label>
-                                                    <select name="kategori_kampus" id="" class="form-control">
+                                                    <select name="kategori_kampus" class="form-control">
                                                       <option<?= ($kos->kategori_kampus == 'UNIKOM, ITHB, UNPAD, ITB') ? ' selected' : ''; ?>>UNIKOM, ITHB, UNPAD, ITB</option>
                                                       <option<?= ($kos->kategori_kampus == 'UNISBA, UNPAS') ? ' selected' : ''; ?>>UNISBA, UNPAS</option>
                                                       <option<?= ($kos->kategori_kampus == 'ITENAS, WIDYATAMA, LP3I') ? ' selected' : ''; ?>>ITENAS, WIDYATAMA, LP3I</option>
@@ -251,34 +251,34 @@ include "components/header.php";
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="harga_sewa2">Keterangan Harga Sewa</label>
+                                                    <label>Keterangan Harga Sewa</label>
                                                     <input type="text" class="form-control" name="harga_sewa2" placeholder="Misal: Rp 750.000/Bln" value="<?= $kos->harga_sewa2 ?>">
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="nama_pemilik">Nama Pemilik</label>
+                                                    <label>Nama Pemilik</label>
                                                     <input type="text" class="form-control" name="nama_pemilik" value="<?= $kos->nama_pemilik ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="nomor_tlp">Nomor Telepon Utama</label>
+                                                    <label>Nomor Telepon Utama</label>
                                                     <input type="text" class="form-control" name="nomor_tlp" value="<?= $kos->nomor_tlp ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="nomor_tlp2">Nomor Telepon Kedua</label>
+                                                    <label>Nomor Telepon Kedua</label>
                                                     <input type="text" class="form-control" name="nomor_tlp2" value="<?= $kos->nomor_tlp2 ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="gambar_kosan">Foto Kosan</label>
+                                                    <label>Foto Kosan</label>
                                                     <input type="file" name="gambar_kosan">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="keterangan">Deskripsi Kosan</label>
+                                                    <label>Deskripsi Kosan</label>
                                                     <textarea name="keterangan" cols="10" rows="5" class="form-control"><?= $kos->keterangan ?></textarea>
                                                 </div>
                                                 <div class="text-right">
-                                                <button type="button" href="#step2" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonFacility">Selanjutnya</button>
+                                                <a href="#step2" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonFacility">Selanjutnya</a>
                                             </div>
                                         </div>
                                     </div>
@@ -287,16 +287,16 @@ include "components/header.php";
                                 <div role="tabpanel" class="tab-pane fade" id="step2">
                                     <!-- Fasilitas Kamar -->
                                     <div class="form-group">
-                                    <label for="fasilitas_kamar">Fasilitas Kamar</label>
+                                    <label>Fasilitas Kamar</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="kamar_mandi_dalam"<?= ($f_kamar->kamar_mandi_dalam == 'yes') ? ' checked' : ''; ?>> Kamar Mandi Dalam
+                                            <input type="checkbox" name="kamar_mandi_dalam"<?= ($fasilitasKamar->kamar_mandi_dalam == 'yes') ? ' checked' : ''; ?>> Kamar Mandi Dalam
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="tempat_tidur"<?= ($f_kamar->tempat_tidur == 'yes') ? ' checked' : ''; ?>> Tempat Tidur
+                                            <input type="checkbox" name="tempat_tidur"<?= ($fasilitasKamar->tempat_tidur == 'yes') ? ' checked' : ''; ?>> Tempat Tidur
                                           </label>
                                         </div>
                                       </div>
@@ -304,25 +304,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="lemari"<?= ($f_kamar->lemari == 'yes') ? ' checked' : ''; ?>> Lemari
+                                            <input type="checkbox" name="lemari"<?= ($fasilitasKamar->lemari == 'yes') ? ' checked' : ''; ?>> Lemari
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="meja"<?= ($f_kamar->meja == 'yes') ? ' checked' : ''; ?>> Meja
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="ac"<?= ($f_kamar->ac == 'yes') ? ' checked' : ''; ?>> AC
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="tv"<?= ($f_kamar->tv == 'yes') ? ' checked' : ''; ?>> TV
+                                            <input type="checkbox" name="meja"<?= ($fasilitasKamar->meja == 'yes') ? ' checked' : ''; ?>> Meja
                                           </label>
                                         </div>
                                       </div>
@@ -330,25 +317,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="tv_kabel"<?= ($f_kamar->tv_kabel == 'yes') ? ' checked' : ''; ?>> TV Kabel
+                                            <input type="checkbox" name="ac"<?= ($fasilitasKamar->ac == 'yes') ? ' checked' : ''; ?>> AC
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="kipas_angin"<?= ($f_kamar->kipas_angin == 'yes') ? ' checked' : ''; ?>> Kipas Angin
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="air_panas"<?= ($f_kamar->air_panas == 'yes') ? ' checked' : ''; ?>> Air Panas
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="telepon"<?= ($f_kamar->telepon == 'yes') ? ' checked' : ''; ?>> Telepon
+                                            <input type="checkbox" name="tv"<?= ($fasilitasKamar->tv == 'yes') ? ' checked' : ''; ?>> TV
                                           </label>
                                         </div>
                                       </div>
@@ -356,12 +330,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="wastafel"<?= ($f_kamar->wastafel == 'yes') ? ' checked' : ''; ?>> Wastafel
+                                            <input type="checkbox" name="tv_kabel"<?= ($fasilitasKamar->tv_kabel == 'yes') ? ' checked' : ''; ?>> TV Kabel
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="internet"<?= ($f_kamar->internet == 'yes') ? ' checked' : ''; ?>> Internet
+                                            <input type="checkbox" name="kipas_angin"<?= ($fasilitasKamar->kipas_angin == 'yes') ? ' checked' : ''; ?>> Kipas Angin
                                           </label>
                                         </div>
                                       </div>
@@ -369,12 +343,38 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="kulkas"<?= ($f_kamar->kulkas == 'yes') ? ' checked' : ''; ?>> Kulkas
+                                            <input type="checkbox" name="air_panas"<?= ($fasilitasKamar->air_panas == 'yes') ? ' checked' : ''; ?>> Air Panas
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="rak_buku"<?= ($f_kamar->rak_buku == 'yes') ? ' checked' : ''; ?>> Rak Buku
+                                            <input type="checkbox" name="telepon"<?= ($fasilitasKamar->telepon == 'yes') ? ' checked' : ''; ?>> Telepon
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="wastafel"<?= ($fasilitasKamar->wastafel == 'yes') ? ' checked' : ''; ?>> Wastafel
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="internet"<?= ($fasilitasKamar->internet == 'yes') ? ' checked' : ''; ?>> Internet
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="kulkas"<?= ($fasilitasKamar->kulkas == 'yes') ? ' checked' : ''; ?>> Kulkas
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="rak_buku"<?= ($fasilitasKamar->rak_buku == 'yes') ? ' checked' : ''; ?>> Rak Buku
                                           </label>
                                         </div>
                                       </div>
@@ -382,16 +382,16 @@ include "components/header.php";
 
                                     <!-- Fasilitas Umum -->
                                     <div class="form-group">
-                                    <label for="fasilitas_umum">Fasilitas Umum</label>
+                                    <label>Fasilitas Umum</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="dapur_bersama"<?= ($f_umum->dapur_bersama == 'yes') ? ' checked' : ''; ?>> Dapur Bersama
+                                            <input type="checkbox" name="dapur_bersama"<?= ($fasilitasUmum->dapur_bersama == 'yes') ? ' checked' : ''; ?>> Dapur Bersama
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="ruangan_tamu"<?= ($f_umum->ruangan_tamu == 'yes') ? ' checked' : ''; ?>> Ruangan Tamu
+                                            <input type="checkbox" name="ruangan_tamu"<?= ($fasilitasUmum->ruangan_tamu == 'yes') ? ' checked' : ''; ?>> Ruangan Tamu
                                           </label>
                                         </div>
                                       </div>
@@ -399,25 +399,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="parkir_motor"<?= ($f_umum->parkir_motor == 'yes') ? ' checked' : ''; ?>> Parkir Motor
+                                            <input type="checkbox" name="parkir_motor"<?= ($fasilitasUmum->parkir_motor == 'yes') ? ' checked' : ''; ?>> Parkir Motor
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="parkir_mobil"<?= ($f_umum->parkir_mobil == 'yes') ? ' checked' : ''; ?>> Parkir Mobil
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="kamar_mandi_bersama"<?= ($f_umum->kamar_mandi_bersama == 'yes') ? ' checked' : ''; ?>> Kamar Mandi Bersama
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="kulkas_bersama"<?= ($f_umum->kulkas_bersama == 'yes') ? ' checked' : ''; ?>> Kulkas Bersama
+                                            <input type="checkbox" name="parkir_mobil"<?= ($fasilitasUmum->parkir_mobil == 'yes') ? ' checked' : ''; ?>> Parkir Mobil
                                           </label>
                                         </div>
                                       </div>
@@ -425,25 +412,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="kantin"<?= ($f_umum->kantin == 'yes') ? ' checked' : ''; ?>> Kantin
+                                            <input type="checkbox" name="kamar_mandi_bersama"<?= ($fasilitasUmum->kamar_mandi_bersama == 'yes') ? ' checked' : ''; ?>> Kamar Mandi Bersama
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="mesin_cuci"<?= ($f_umum->mesin_cuci == 'yes') ? ' checked' : ''; ?>> Mesin Cuci
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="wifi"<?= ($f_umum->wifi == 'yes') ? ' checked' : ''; ?>> Wifi
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="pembantu"<?= ($f_umum->pembantu == 'yes') ? ' checked' : ''; ?>> Pembantu
+                                            <input type="checkbox" name="kulkas_bersama"<?= ($fasilitasUmum->kulkas_bersama == 'yes') ? ' checked' : ''; ?>> Kulkas Bersama
                                           </label>
                                         </div>
                                       </div>
@@ -451,12 +425,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="tv_bersama"<?= ($f_umum->tv_bersama == 'yes') ? ' checked' : ''; ?>> TV Bersama
+                                            <input type="checkbox" name="kantin"<?= ($fasilitasUmum->kantin == 'yes') ? ' checked' : ''; ?>> Kantin
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="cctv"<?= ($f_umum->cctv == 'yes') ? ' checked' : ''; ?>> CCTV
+                                            <input type="checkbox" name="mesin_cuci"<?= ($fasilitasUmum->mesin_cuci == 'yes') ? ' checked' : ''; ?>> Mesin Cuci
                                           </label>
                                         </div>
                                       </div>
@@ -464,12 +438,38 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="ruangan_makan"<?= ($f_umum->ruangan_makan == 'yes') ? ' checked' : ''; ?>> Ruangan Makan
+                                            <input type="checkbox" name="wifi"<?= ($fasilitasUmum->wifi == 'yes') ? ' checked' : ''; ?>> Wifi
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="dispenser"<?= ($f_umum->dispenser == 'yes') ? ' checked' : ''; ?>> Dispenser
+                                            <input type="checkbox" name="pembantu"<?= ($fasilitasUmum->pembantu == 'yes') ? ' checked' : ''; ?>> Pembantu
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="tv_bersama"<?= ($fasilitasUmum->tv_bersama == 'yes') ? ' checked' : ''; ?>> TV Bersama
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="cctv"<?= ($fasilitasUmum->cctv == 'yes') ? ' checked' : ''; ?>> CCTV
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="ruangan_makan"<?= ($fasilitasUmum->ruangan_makan == 'yes') ? ' checked' : ''; ?>> Ruangan Makan
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="dispenser"<?= ($fasilitasUmum->dispenser == 'yes') ? ' checked' : ''; ?>> Dispenser
                                           </label>
                                         </div>
                                       </div>
@@ -477,16 +477,16 @@ include "components/header.php";
 
                                     <!-- Fasilitas Terdekat -->
                                     <div class="form-group">
-                                    <label for="fasilitas_terdekat">Fasilitas Terdekat</label>
+                                    <label>Fasilitas Terdekat</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="warnet"<?= ($f_terdekat->warnet == 'yes') ? ' checked' : ''; ?>> Warnet
+                                            <input type="checkbox" name="warnet"<?= ($fasilitasTerdekat->warnet == 'yes') ? ' checked' : ''; ?>> Warnet
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="warteg"<?= ($f_terdekat->warteg == 'yes') ? ' checked' : ''; ?>> Warteg
+                                            <input type="checkbox" name="warteg"<?= ($fasilitasTerdekat->warteg == 'yes') ? ' checked' : ''; ?>> Warteg
                                           </label>
                                         </div>
                                       </div>
@@ -494,25 +494,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="balai_kesehatan"<?= ($f_terdekat->balai_kesehatan == 'yes') ? ' checked' : ''; ?>> Balai Kesehatan
+                                            <input type="checkbox" name="balai_kesehatan"<?= ($fasilitasTerdekat->balai_kesehatan == 'yes') ? ' checked' : ''; ?>> Balai Kesehatan
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="masjid"<?= ($f_terdekat->masjid == 'yes') ? ' checked' : ''; ?>> Masjid
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="gereja"<?= ($f_terdekat->gereja == 'yes') ? ' checked' : ''; ?>> Gereja
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="bank"<?= ($f_terdekat->bank == 'yes') ? ' checked' : ''; ?>> Bank
+                                            <input type="checkbox" name="masjid"<?= ($fasilitasTerdekat->masjid == 'yes') ? ' checked' : ''; ?>> Masjid
                                           </label>
                                         </div>
                                       </div>
@@ -520,25 +507,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="indomaret"<?= ($f_terdekat->indomaret == 'yes') ? ' checked' : ''; ?>> Indomaret
+                                            <input type="checkbox" name="gereja"<?= ($fasilitasTerdekat->gereja == 'yes') ? ' checked' : ''; ?>> Gereja
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="alfamart"<?= ($f_terdekat->alfamart == 'yes') ? ' checked' : ''; ?>> Alfamart
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <div class="row">
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="circle_k"<?= ($f_terdekat->circle_k == 'yes') ? ' checked' : ''; ?>> Circle K
-                                          </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label class="checkbox-inline">
-                                            <input type="checkbox" name="mall"<?= ($f_terdekat->mall == 'yes') ? ' checked' : ''; ?>> Mall
+                                            <input type="checkbox" name="bank"<?= ($fasilitasTerdekat->bank == 'yes') ? ' checked' : ''; ?>> Bank
                                           </label>
                                         </div>
                                       </div>
@@ -546,12 +520,12 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="supermarket"<?= ($f_terdekat->supermarket == 'yes') ? ' checked' : ''; ?>> Supermarket
+                                            <input type="checkbox" name="indomaret"<?= ($fasilitasTerdekat->indomaret == 'yes') ? ' checked' : ''; ?>> Indomaret
                                           </label>
                                         </div>
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="rumah_sakit"<?= ($f_terdekat->rumah_sakit == 'yes') ? ' checked' : ''; ?>> Rumah Sakit
+                                            <input type="checkbox" name="alfamart"<?= ($fasilitasTerdekat->alfamart == 'yes') ? ' checked' : ''; ?>> Alfamart
                                           </label>
                                         </div>
                                       </div>
@@ -559,23 +533,49 @@ include "components/header.php";
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
-                                            <input type="checkbox" name="akses_transportasi"<?= ($f_terdekat->akses_transportasi == 'yes') ? ' checked' : ''; ?>> Dekat Akses Kendaraan Umum
+                                            <input type="checkbox" name="circle_k"<?= ($fasilitasTerdekat->circle_k == 'yes') ? ' checked' : ''; ?>> Circle K
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="mall"<?= ($fasilitasTerdekat->mall == 'yes') ? ' checked' : ''; ?>> Mall
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="supermarket"<?= ($fasilitasTerdekat->supermarket == 'yes') ? ' checked' : ''; ?>> Supermarket
+                                          </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="rumah_sakit"<?= ($fasilitasTerdekat->rumah_sakit == 'yes') ? ' checked' : ''; ?>> Rumah Sakit
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <label class="checkbox-inline">
+                                            <input type="checkbox" name="akses_transportasi"<?= ($fasilitasTerdekat->akses_transportasi == 'yes') ? ' checked' : ''; ?>> Dekat Akses Kendaraan Umum
                                           </label>
                                         </div>
                                       </div>
 
                                       <div class="text-right">
-                                        <button type="button" href="#step1" data-toggle="tab" class="btn btn-warning btn-flat prev-step" id="buttonBackGeneral">Kembali</button>
-                                        <button type="button" href="#step3" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonMapTab">Selanjutnya</button>
+                                        <a href="#step1" data-toggle="tab" class="btn btn-warning btn-flat prev-step" id="buttonBackGeneral">Kembali</a>
+                                        <a href="#step3" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonMapTab">Selanjutnya</a>
                                       </div>
                                     </div>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane fade" id="step3">
-                                    <section id="map-canvas">
-                                        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBm3VfroAQ3A8G48t2bHaELoKC_7MG3mmg"></script>
-                                        <div id="map"></div>
-                                    </section>
+
+                                    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBm3VfroAQ3A8G48t2bHaELoKC_7MG3mmg"></script>
+                                    <div id="map"></div>
+
 
                                     <div class="row">
                                         <div class="col-md-7">
@@ -583,26 +583,26 @@ include "components/header.php";
                                               <span class="text-danger">Anda dapat memindahkan marker di peta sesuai dengan alamat kos</span>
                                             </div>
                                             <div class="form-group">
-                                                <label for="nama">Nama Kosan di Map</label>
-                                                <input type="text" class="form-control" name="nama_lokasi" autofocus value="<?= $lok->nama ?>">
+                                                <label>Nama Kosan di Map</label>
+                                                <input type="text" class="form-control" name="nama_lokasi" value="<?= $lok->nama ?>">
                                             </div>
                                             <div class="form-group">
-                                                <label for="alamat">Alamat Kosan di Map</label>
+                                                <label>Alamat Kosan di Map</label>
                                                 <input type="text" class="form-control" name="alamat_lokasi" value="<?= $lok->alamat ?>">
                                             </div>
                                             <div class="form-group">
-                                                <label for="lat">Latitude</label>
+                                                <label>Latitude</label>
                                                 <input type="text" id="latitude" class="form-control" name="lat" value="<?= $lok->lat ?>">
                                             </div>
                                             <div class="form-group">
-                                                <label for="lon">Longitude</label>
+                                                <label>Longitude</label>
                                                 <input type="text" id="longitude" class="form-control" name="lon" value="<?= $lok->lon ?>">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="text-right">
-                                        <button type="button" href="#step2" class="btn btn-warning btn-flat prev-step" data-toggle="tab" id="buttonBackFacility">Kembali</button>
+                                        <a href="#step2" class="btn btn-warning btn-flat prev-step" data-toggle="tab" id="buttonBackFacility">Kembali</a>
                                         <button type="submit" name="submit" class="btn btn-success btn-flat">Simpan</button>
                                     </div>
                                 </div>

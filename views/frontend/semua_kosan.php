@@ -7,7 +7,6 @@ include "views/frontend/components/header.php";
     <section id="beginning">
       <div class="intro-picture">
         <img src="resources/images/bg-home.jpg" alt="intro gambar">
-
         <form action="filter_kosan.php" method="post">
         <div class="container">
         <h2 class="intro-description">TEMUKAN KOSAN ANDA</h2>
@@ -15,7 +14,6 @@ include "views/frontend/components/header.php";
           <div class="col-md-12">
             <div class="box-searching">
               <div class="panel-body">
-                <form class="form-inline">
                   <div class="row">
                     <div class="col-md-3 col-xs-6">
                       <div class="form-group">
@@ -99,26 +97,23 @@ include "views/frontend/components/header.php";
                       </div>
                     </div>
                   </div>
-                </form>
               </div><!-- /.panel-body -->
             </div><!-- /.box -->
           </div><!-- /.col -->
-        </div><!-- /.row -->
-        </div><!-- /.container -->
-      </form>
+          </div><!-- /.row -->
+          </div><!-- /.container -->
+        </form>
+      </div>
     </section>
 
-    <section id="kost">
+    <div id="favourite-kost">
       <div class="container">
         <h2> INFORMASI KOSAN</h2>
         <p class="information">E-Kosan menyediakan informasi kosan di wilayah Bandung lengkap dengan fasilitasnya.<br>Kami berharap Anda dapat menemukan kosan yang sesuai dengan keinginan Anda.</p>
         <br>
 
-        <h4>Kosan Favorit</h4>
+        <h4>Semua Data Kosan</h4>
         <?php
-
-          $kost = new App\Kost;
-          $kosts = $kost->fetchKost();
 
           if (count($kosts) == 0) {
 
@@ -178,7 +173,7 @@ include "views/frontend/components/header.php";
                       }
 
                       if ($fasilitasKamar->tempat_tidur == 'yes') {
-                        echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</td>";
+                        echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</i></td>";
                       }
 
                       $fasilitas = new App\PublicFacility;
@@ -186,11 +181,11 @@ include "views/frontend/components/header.php";
                       $fasilitasUmum = $fasilitas->fetchDetail($kos->kode_kosan);
                       // cek semua fasilitas
                       if ($fasilitasUmum->parkir_motor == 'yes') {
-                        echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</td>";
+                        echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</i></td>";
                       }
 
                       if ($fasilitasUmum->parkir_mobil == 'yes') {
-                        echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</td>";
+                        echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</i></td>";
                       }
                     ?>
                     </tr>
@@ -211,8 +206,13 @@ include "views/frontend/components/header.php";
           }
         } ?>
         </div>
+      <div class="text-center">
+        <?php
+          echo $kost->pagination(6, $page)
+        ?>
       </div>
-    </section>
+      </div>
+    </div>
 
 <?php
 

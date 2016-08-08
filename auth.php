@@ -6,6 +6,7 @@ include "config/app.php";
 include "config/database.php";
 
 $action = isset($_GET['action']) ? $_GET['action'] : null;
+
 if ($action != null) {
     $_SESSION['error'] = array();
 
@@ -17,9 +18,9 @@ if ($action != null) {
     }
 
     if (! empty($_POST['password']) && strlen($_POST['password']) < 4) {
-        $_SESSION['error'][$action][] = "Kata sandi harus lebih dari 4 karakter!";
+        $_SESSION['error'][$action][] = "Password harus lebih dari 4 karakter!";
     } else if (empty($_POST['password'])) {
-        $_SESSION['error'][$action][] = "Kata sandi tidak boleh kosong!";
+        $_SESSION['error'][$action][] = "Password tidak boleh kosong!";
     } else {
         $password = $_POST['password'];
     }
@@ -37,6 +38,8 @@ if ($action != null) {
 
             if ($loggedInUser != null) {
                 $_SESSION['logged_in_user'] = $loggedInUser;
+                unset($_SESSION['logged_in_user']['password']);
+                $_SESSION['logged_in_user']['status'] = $status;
             } else {
                 $_SESSION['error'][$action][] = "Username atau password tidak sesuai!";
             }
@@ -58,11 +61,13 @@ if ($action != null) {
         }
 
         if (empty($_SESSION['error'])) {
-            $newUser = new App\User($username, $password, $status, $email, $fullname);
+            $newUser = new App\User($username, $password, $status, $fullname, $email);
             $registeredUser = $newUser->register();
 
             if ($registeredUser != null) {
                 $_SESSION['logged_in_user'] = (array) $registeredUser;
+                unset($_SESSION['logged_in_user']['password']);
+                $_SESSION['logged_in_user']['status'] = $status;
             }
         }
     }

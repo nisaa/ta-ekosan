@@ -154,7 +154,7 @@ class User
     {
         if($this->status == "pencari_kos") {
             $sql = "SELECT * FROM members";
-        } elseif ($this->status == "pemilik_kos") {
+        } else if ($this->status == "pemilik_kos") {
             $sql = "SELECT * FROM pemilik_kos";
         }
 
@@ -187,7 +187,7 @@ class User
 
         if($this->status == "pencari_kos") {
             $sql = "INSERT INTO members";
-        } elseif ($this->status == "pemilik_kos") {
+        } else if ($this->status == "pemilik_kos") {
             $sql = "INSERT INTO pemilik_kos";
         }
         $sql .= "(username, password, email, full_name) VALUES(:username, :password, :email, :fullname)";

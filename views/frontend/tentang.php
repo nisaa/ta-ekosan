@@ -4,7 +4,6 @@ include "components/header.php";
 
 ?>
 
-<div id="beginning">
     <section id="about">
         <div class="container">
             <h3 class="about-ekosan">Tentang E-Kosan</h3>
@@ -45,9 +44,7 @@ include "components/header.php";
             <i class="fa fa-map-marker"></i>
             <p class="add-location"> Jl. Sekeloa No. 62 Bandung</p>
         </div>
-    </section>
 
-    <section id="map-canvas">
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBm3VfroAQ3A8G48t2bHaELoKC_7MG3mmg"></script>
             <div id="map"></div>
             <script type="text/javascript">
@@ -77,5 +74,4 @@ include "components/header.php";
         include "components/footer.php";
 
     ?>
-</div>
 

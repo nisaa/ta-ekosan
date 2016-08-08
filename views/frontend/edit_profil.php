@@ -151,33 +151,33 @@ include "components/header.php";
                         }
                         ?>
                         <form action="proses_edit_profil.php?id=<?= $_SESSION['logged_in_user']['user_id'] ?>" method="post" enctype="multipart/form-data">
-                          <label for="gambar">Foto Profil</label>
+                          <label>Foto Profil</label>
                           <input type="file" name="gambar">
                           <div class="form-group">
-                            <label for="fullname">Nama Lengkap</label>
-                            <input type="text" class="form-control" name="fullname" value="<?= $_SESSION['logged_in_user']['full_name'] ?>" autofocus>
+                            <label>Nama Lengkap</label>
+                            <input type="text" class="form-control" name="fullname" value="<?= $_SESSION['logged_in_user']['full_name'] ?>">
                           </div>
                           <div class="form-group">
-                              <label for="password">Password</label>
+                              <label>Password</label>
                               <input type="password" class="form-control" name="password">
                               Hanya isi kolom ini jika ingin merubah password
                           </div>
                           <div class="form-group">
-                            <label for="alamat">Alamat</label>
+                            <label>Alamat</label>
                             <input type="text" class="form-control" name="address" value="<?= $_SESSION['logged_in_user']['alamat'] ?>">
                           </div>
                           <div class="form-group">
-                            <label for="email">E-mail</label>
+                            <label>E-mail</label>
                             <input type="text" class="form-control" name="email" value="<?= $_SESSION['logged_in_user']['email'] ?>">
                           </div>
                           <div class="form-group">
-                            <label for="telp">No. Telp</label>
+                            <label>No. Telp</label>
                             <input type="text" class="form-control" name="phone" value="<?= $_SESSION['logged_in_user']['telp'] ?>">
                           </div>
                           <div class="row">
                             <div class="col-xs-8">
                               <button type="submit" class="btn bg-maroon btn-flat">Simpan</button>
-                              <a href="profil.php" type="button" class="btn btn-default btn-flat">Batal</a>
+                              <a href="profil.php" class="btn btn-default btn-flat">Batal</a>
                             </div>
                           </div>
                         </form>

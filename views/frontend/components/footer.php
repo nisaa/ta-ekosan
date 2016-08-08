@@ -33,23 +33,23 @@
                     </div>
                   <?php } ?>
                   <div class="form-group">
-                    <label for="fullname">Nama Lengkap <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="fullname" autofocus>
+                    <label>Nama Lengkap <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="fullname">
                   </div>
                   <div class="form-group">
-                      <label for="e-mail">E-mail <span class="text-danger">*</span></label>
+                      <label>E-mail <span class="text-danger">*</span></label>
                       <input type="email" class="form-control" name="email">
                   </div>
                   <div class="form-group">
-                      <label for="username">Username <span class="text-danger">*</span></label>
+                      <label>Username <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" name="username">
                   </div>
                   <div class="form-group">
-                      <label for="password">Password <span class="text-danger">*</span></label>
+                      <label>Password <span class="text-danger">*</span></label>
                       <input type="password" class="form-control" name="password">
                   </div>
                   <div class="form-group">
-                    <label for="status">Status <span class="text-danger">*</span></label>
+                    <label>Status <span class="text-danger">*</span></label>
                       <div class="row">
                         <div class="col-md-6">
                           <label class="radio-inline">

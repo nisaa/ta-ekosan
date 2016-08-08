@@ -160,15 +160,15 @@ include "components/header.php";
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="nama_kosan">Nama Kosan <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" name="nama_kosan" autofocus>
+                                                <label>Nama Kosan <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="nama_kosan">
                                             </div>
                                             <div class="form-group">
-                                                <label for="alamat_kosan">Alamat Kosan <span class="text-danger">*</span></label>
+                                                <label>Alamat Kosan <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" name="alamat_kosan">
                                             </div>
                                             <div class="form-group">
-                                                <label for="jenis_hunian">Peruntukan Penghuni</label>
+                                                <label>Peruntukan Penghuni</label>
                                                   <div class="row">
                                                     <div class="col-md-4">
                                                       <label class="radio-inline">
@@ -188,7 +188,7 @@ include "components/header.php";
                                                   </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="mayoritas_penghuni">Mayoritas Penghuni</label>
+                                                <label>Mayoritas Penghuni</label>
                                                   <div class="row">
                                                     <div class="col-md-4">
                                                       <label class="checkbox-inline">
@@ -222,7 +222,7 @@ include "components/header.php";
                                             </div>
                                             <div class="form-group">
                                                 <label>Lokasi Kampus Terdekat</label>
-                                                <select name="kategori_kampus" id="" class="form-control">
+                                                <select name="kategori_kampus" class="form-control">
                                                   <option>UNIKOM, ITHB, UNPAD, ITB</option>
                                                   <option>UNISBA, UNPAS</option>
                                                   <option>ITENAS, WIDYATAMA, LP3I</option>
@@ -250,7 +250,7 @@ include "components/header.php";
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="harga_sewa2">Keterangan Harga Sewa <span class="text-danger">*</span></label>
+                                                <label>Keterangan Harga Sewa <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" name="harga_sewa2" placeholder="Misal: Rp 750.000/Bln">
                                             </div>
                                             <div>
@@ -260,27 +260,27 @@ include "components/header.php";
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="nama_pemilik">Nama Pemilik</label>
+                                                <label>Nama Pemilik</label>
                                                 <input type="text" class="form-control" name="nama_pemilik">
                                             </div>
                                             <div class="form-group">
-                                                <label for="nomor_tlp">Nomor Telepon Utama <span class="text-danger">*</span></label>
+                                                <label>Nomor Telepon Utama <span class="text-danger">*</span></label>
                                                 <input type="text" class="form-control" name="nomor_tlp">
                                             </div>
                                             <div class="form-group">
-                                                <label for="nomor_tlp2">Nomor Telepon Kedua</label>
+                                                <label>Nomor Telepon Kedua</label>
                                                 <input type="text" class="form-control" name="nomor_tlp2">
                                             </div>
                                             <div class="form-group">
-                                                <label for="gambar_kosan">Foto Kosan</label>
+                                                <label>Foto Kosan</label>
                                                 <input type="file" name="gambar_kosan">
                                             </div>
                                             <div class="form-group">
-                                                <label for="keterangan">Deskripsi Kosan</label>
+                                                <label>Deskripsi Kosan</label>
                                                 <textarea name="keterangan" cols="10" rows="5" class="form-control"></textarea>
                                             </div>
                                             <div class="text-right">
-                                              <button type="button" href="#step2" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonFacility">Selanjutnya</button>
+                                              <a href="#step2" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonFacility">Selanjutnya</a>
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@ include "components/header.php";
                                 <div role="tabpanel" class="tab-pane fade" id="step2">
                                     <!-- Fasilitas Kamar -->
                                     <div class="form-group">
-                                    <label for="fasilitas_kamar">Fasilitas Kamar</label>
+                                    <label>Fasilitas Kamar</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
@@ -384,7 +384,7 @@ include "components/header.php";
 
                                     <!-- Fasilitas Umum -->
                                     <div class="form-group">
-                                    <label for="fasilitas_umum">Fasilitas Umum</label>
+                                    <label>Fasilitas Umum</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
@@ -479,7 +479,7 @@ include "components/header.php";
 
                                     <!-- Fasilitas Terdekat -->
                                     <div class="form-group">
-                                    <label for="fasilitas_terdekat">Fasilitas Terdekat</label>
+                                    <label>Fasilitas Terdekat</label>
                                       <div class="row">
                                         <div class="col-md-4">
                                           <label class="checkbox-inline">
@@ -567,17 +567,17 @@ include "components/header.php";
                                       </div>
 
                                       <div class="text-right">
-                                        <button type="button" href="#step1" data-toggle="tab" class="btn btn-warning btn-flat prev-step" id="buttonBackGeneral">Kembali</button>
-                                        <button type="button" href="#step3" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonMapTab">Selanjutnya</button>
+                                        <a href="#step1" data-toggle="tab" class="btn btn-warning btn-flat prev-step" id="buttonBackGeneral">Kembali</a>
+                                        <a href="#step3" data-toggle="tab" class="btn btn-success btn-flat next-step" id="buttonMapTab">Selanjutnya</a>
                                       </div>
                                     </div>
                                 </div>
 
                                 <div role="tabpanel" class="tab-pane fade" id="step3">
-                                    <section id="map-canvas">
-                                        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBm3VfroAQ3A8G48t2bHaELoKC_7MG3mmg"></script>
-                                        <div id="map"></div>
-                                    </section>
+
+                                    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBm3VfroAQ3A8G48t2bHaELoKC_7MG3mmg"></script>
+                                    <div id="map"></div>
+
 
                                     <div class="row">
                                         <div class="col-md-7">
@@ -585,26 +585,26 @@ include "components/header.php";
                                               <span class="text-danger">Anda dapat memindahkan marker di peta sesuai dengan alamat kos</span>
                                             </div>
                                             <div class="form-group">
-                                                <label for="nama">Nama Kosan di Map</label>
-                                                <input type="text" class="form-control" name="nama_lokasi" autofocus>
+                                                <label>Nama Kosan di Map</label>
+                                                <input type="text" class="form-control" name="nama_lokasi">
                                             </div>
                                             <div class="form-group">
-                                                <label for="alamat">Alamat Kosan di Map</label>
+                                                <label>Alamat Kosan di Map</label>
                                                 <input type="text" class="form-control" name="alamat_lokasi">
                                             </div>
                                             <div class="form-group">
-                                                <label for="lat">Latitude</label>
+                                                <label>Latitude</label>
                                                 <input type="text" id="latitude" class="form-control" name="lat">
                                             </div>
                                             <div class="form-group">
-                                                <label for="lon">Longitude</label>
+                                                <label>Longitude</label>
                                                 <input type="text" id="longitude" class="form-control" name="lon">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="text-right">
-                                      <button type="button" href="#step2" class="btn btn-warning btn-flat prev-step" data-toggle="tab" id="buttonBackFacility">Kembali</button>
+                                      <a href="#step2" class="btn btn-warning btn-flat prev-step" data-toggle="tab" id="buttonBackFacility">Kembali</a>
                                       <button type="submit" name="submit" class="btn btn-success btn-flat">Simpan</button>
                                     </div>
                                 </div>

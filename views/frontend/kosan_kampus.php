@@ -7,16 +7,14 @@ include "components/header.php";
 <div id="beginning" style="height: auto;">
     <div class="container">
         <div class="display-setting">
-            <h4>Hasil pencarian</h4>
+            <h4>Kosan Sekitar Kampus</h4>
 
             <?php
-
-              echo count($kosts) . " hasil";
 
               if (count($kosts) == 0) {
 
             ?>
-            <h5>Hasil pencarian kosan tidak ditemukan. Silakan cari dengan kata kunci lainnya</h5>
+            <h5>Kosan di sekitar kampus tidak ditemukan.</h5>
             <?php
             } else {
                 $i = 1;
@@ -40,7 +38,7 @@ include "components/header.php";
                                 <div class="row">
                                   <div class="col-md-5">
                                     <div class="image kos-image">
-                                      <img src="resources/images/<?= $kos->gambar_kosan ?>" alt="">
+                                      <img src="resources/images/<?= $kos->gambar_kosan ?>">
                                     </div>
                                   </div>
                                   <div class="col-md-6">
@@ -69,7 +67,7 @@ include "components/header.php";
                                   }
 
                                   if ($fasilitasKamar->tempat_tidur == 'yes') {
-                                    echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</i></td>";
+                                    echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</td>";
                                   }
 
                                   $fasilitas = new App\PublicFacility;
@@ -77,11 +75,11 @@ include "components/header.php";
                                   $fasilitasUmum = $fasilitas->fetchDetail($kos->kode_kosan);
                                   // cek semua fasilitas
                                   if ($fasilitasUmum->parkir_motor == 'yes') {
-                                    echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</i></td>";
+                                    echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</td>";
                                   }
 
                                   if ($fasilitasUmum->parkir_mobil == 'yes') {
-                                    echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</i></td>";
+                                    echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</td>";
                                   }
                                 ?>
                                 </tr>
@@ -102,11 +100,10 @@ include "components/header.php";
             }
           }
         } ?>
+            </div>
         </div>
     </div>
 </div>
-
-
 
 
 <?php

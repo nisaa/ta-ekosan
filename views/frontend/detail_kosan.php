@@ -112,7 +112,7 @@ include "components/header.php";
                             <div class="col-md-12">
                                 <div class="form-group">
                                 <label>Harga</label>
-                                <select name="harga_kosan" id="" class="form-control">
+                                <select name="harga_kosan" class="form-control">
                                   <option> &lt;Rp 500.000/Bln </option>
                                   <option> Rp 500.000 - Rp 1.000.000/Bln</option>
                                   <option> &gt;Rp 1.000.000/Bln</option>
@@ -157,7 +157,7 @@ include "components/header.php";
                     <div class="row">
                       <div class="col-md-8">
                         <div class="detail-image">
-                          <img src="<?php echo $siteUrl . "resources/images/" . $kostDetail->gambar_kosan ?>"/>
+                          <img src="<?php echo $siteUrl . "resources/images/" . $kostDetail->gambar_kosan ?>" alt="">
                         </div>
                       </div>
                       <div class="col-md-4">
@@ -167,10 +167,26 @@ include "components/header.php";
                         <p><?= $kostDetail->keterangan ?></p>
                         <span><b> Penghuni</b></span>
                         <p><?= $kostDetail->jenis_hunian ?></p>
+                        <span><b> Lokasi Kampus Terdekat</b></span>
+                        <p><?= $kostDetail->kategori_kampus ?></p>
                         <span><b> Kontak</b></span>
                         <p> Hubungi <?= $kostDetail->nama_pemilik ?>:
                             <br><i class="fa fa-phone"></i> <?= $kostDetail->nomor_tlp . " / " . $kostDetail->nomor_tlp2 ?>
                         </p>
+                        <span><b> Yang Melihat</b></span>
+                        <?php
+                          $view = $kostDetail->jumlah_view;
+                          $viewAmount = $view + 1;
+
+                          $sql = "UPDATE kosan SET jumlah_view = :viewAmount WHERE kode_kosan = :id";
+
+                          $statement = $kost->getDb()->prepare($sql);
+                          $statement->bindParam(':id', $id, PDO::PARAM_INT);
+                          $statement->bindParam(':viewAmount', $viewAmount, PDO::PARAM_INT);
+
+                          $statement->execute();
+                        ?>
+                        <p><i class="fa fa-eye"> <?= $viewAmount ?></i> orang</p>
                       </div>
                     </div>
                     <p></p>
@@ -188,7 +204,7 @@ include "components/header.php";
                           }
 
                           if ($fasilitasKamar->tempat_tidur == 'yes') {
-                            echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</td>";
+                            echo "<td class=\"items\"><i class=\"fa fa-tint\"> Kamar Mandi Dalam</i></td>";
                           }
 
                           $fasilitas = new App\PublicFacility;
@@ -196,11 +212,11 @@ include "components/header.php";
                           $fasilitasUmum = $fasilitas->fetchDetail($id);
                           // cek semua fasilitas umum
                           if ($fasilitasUmum->parkir_motor == 'yes') {
-                            echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</td>";
+                            echo "<td class=\"items\"><i class=\"fa fa-motorcycle\"> Parkir Motor</i></td>";
                           }
 
                           if ($fasilitasUmum->parkir_mobil == 'yes') {
-                            echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</td>";
+                            echo "<td class=\"items\"><i class=\"fa fa-car\"> Parkir Mobil</i></td>";
                           }
                         ?>
                         </tr>

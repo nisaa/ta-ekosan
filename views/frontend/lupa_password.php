@@ -15,11 +15,11 @@ include "components/header.php";
                 <div> Silakan masukkan email yang digunakan saat mendaftar ke E-Kosan. Kami akan mengirimkan email untuk mereset password Anda</div>
                 <form action="lupa_password.php" method="post">
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" name="email" autofocus>
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="email">
                     </div>
                     <div class="form-group">
-                    <label for="status">Status</label>
+                    <label>Status</label>
                       <div class="row">
                         <div class="col-md-6">
                           <label class="radio-inline">
